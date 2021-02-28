@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" >
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/makequiz1/">
+            {% csrf_token %}
+        <div>
+    <div style="width: 260px; float: left;" >
+        <textarea class="bb" type="text" name="q1" placeholder="question1"></textarea><br>
+        <input class="bb" type="text" name="o11" placeholder="option1"><br>
+        <input class="bb" type="text" name="o12" placeholder="option2"><br>
+        <input class="bb" type="text" name="o13" placeholder="option3"><br>
+        <input class="bb" type="text" name="o14" placeholder="option4"><br>
+        <input class="bb" type="text" name="o15" placeholder="answer"><br><br><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q2" placeholder="question2"></textarea><br>
+        <input class="bb" type="text" name="o21" placeholder="option1"><br>
+        <input class="bb" type="text" name="o22" placeholder="option2"><br>
+        <input class="bb" type="text" name="o23" placeholder="option3"><br>
+        <input class="bb" type="text" name="o24" placeholder="option4"><br>
+        <input class="bb" type="text" name="o25" placeholder="answer"><br><br><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q3" placeholder="question3"></textarea>
+        <input class="bb" type="text" name="o31" placeholder="option1"><br>
+        <input class="bb" type="text" name="o32" placeholder="option2"><br>
+        <input class="bb" type="text" name="o33" placeholder="option3"><br>
+        <input class="bb" type="text" name="o34" placeholder="option4"><br>
+        <input class="bb" type="text" name="o35" placeholder="answer"><br><br><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q4" placeholder="question4"></textarea>
+        <input class="bb" type="text" name="o41" placeholder="option1"><br>
+        <input class="bb" type="text" name="o42" placeholder="option2"><br>
+        <input class="bb" type="text" name="o43" placeholder="option3"><br>
+        <input class="bb" type="text" name="o44" placeholder="option4"><br>
+        <input class="bb" type="text" name="o45" placeholder="answer"><br><br><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q5" placeholder="question5"></textarea>
+        <input class="bb" type="text" name="o51" placeholder="option1"><br>
+        <input class="bb" type="text" name="o52" placeholder="option2"><br>
+        <input class="bb" type="text" name="o53" placeholder="option3"><br>
+        <input class="bb" type="text" name="o54" placeholder="option4"><br>
+        <input class="bb" type="text" name="o55" placeholder="answer"><br><br><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q6" placeholder="question6"></textarea>
+        <input class="bb" type="text" name="o61" placeholder="option1"><br>
+        <input class="bb" type="text" name="o62" placeholder="option2"><br>
+        <input class="bb" type="text" name="o63" placeholder="option3"><br>
+        <input class="bb" type="text" name="o64" placeholder="option4"><br>
+        <input class="bb" type="text" name="o65" placeholder="answer"><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q7" placeholder="question7"></textarea>
+        <input class="bb" type="text" name="o71" placeholder="option1"><br>
+        <input class="bb" type="text" name="o72" placeholder="option2"><br>
+        <input class="bb" type="text" name="o73" placeholder="option3"><br>
+        <input class="bb" type="text" name="o74" placeholder="option4"><br>
+        <input class="bb" type="text" name="o75" placeholder="answer"><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q8" placeholder="question8"></textarea>
+        <input class="bb" type="text" name="o81" placeholder="option1"><br>
+        <input class="bb" type="text" name="o82" placeholder="option2"><br>
+        <input class="bb" type="text" name="o83" placeholder="option3"><br>
+        <input class="bb" type="text" name="o84" placeholder="option4"><br>
+        <input class="bb" type="text" name="o85" placeholder="answer"><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q9" placeholder="question9"></textarea>
+        <input class="bb" type="text" name="o91" placeholder="option1"><br>
+        <input class="bb" type="text" name="o92" placeholder="option2"><br>
+        <input class="bb" type="text" name="o93" placeholder="option3"><br>
+        <input class="bb" type="text" name="o94" placeholder="option4"><br>
+        <input class="bb" type="text" name="o95" placeholder="answer"><br><br>
+    </div>
+    <div style="width: 260px; float: left;">
+        <textarea class="bb" type="text" name="q10" placeholder="question10"></textarea>
+        <input class="bb" type="text" name="o101" placeholder="option1"><br>
+        <input class="bb" type="text" name="o102" placeholder="option2"><br>
+        <input class="bb" type="text" name="o103" placeholder="option3"><br>
+        <input class="bb" type="text" name="o104" placeholder="option4"><br>
+        <input class="bb" type="text" name="o105" placeholder="answer"><br><br>
+    </div>
+        </div>
+
+        <div style="float: none; margin-top: 50px;" >
+            <input class="b1" type="submit" value="save">
+        </div>
+    </form>
+</body>
+</html>

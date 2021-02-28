@@ -1,0 +1,52 @@
+body{
+    background-color: bisque;
+}
+
+.h1{
+    color: black; font-family: 'Snap ITC'; font-size: 50px; margin-top: 100px; margin-left: 26%; margin-bottom: 100px;
+}
+
+.a1{
+    color: blanchedalmond; background-color: red; width: 200px; height: 30px; margin: 100px 1px 10px 400px; 
+    padding: 10px 40px 10px 40px; text-decoration: none;
+}
+.a2{
+    color: blanchedalmond; background-color: red; width: 200px; height: 30px; margin: 50px 1px 10px 400px; 
+    padding: 10px 32px 10px 32px; text-decoration: none;
+}
+.myd1{
+    width: 80%;  margin: auto; background-color: grey; border: 5px grey solid; border-radius: 1px;
+}
+.myd2{
+    width: 80%;  margin: auto; margin-top: 30px; background-color: antiquewhite; border: 5px grey solid; border-radius: 5px;
+}
+.myd3{
+    width: 80%; height: 250px; margin: auto; margin-top: 30px; background-color: whitesmoke; border: 5px whitesmoke solid; border-radius: 5px;
+}
+.l1:link, .l1:visited {
+    background-color: goldenrod;
+    color: black;
+    padding: 24px 55px; font-size: 25px; font-family: 'arial rounded mt'; width: 210.3px;
+    text-align: center; margin-top: 1px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .l1:hover, .l1:active {
+    background-color: black;
+    color: blanchedalmond;
+  }
+
+  .l2:link, .l2:visited {
+    background-color: gray;
+    color: black;
+    padding: 24px 30px; font-size: 25px; font-family: 'arial rounded mt'; width: 210.3px;
+    text-align: center; margin-top: 1px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .l2:hover, .l2:active {
+    background-color: black;
+    color: blanchedalmond;
+  }

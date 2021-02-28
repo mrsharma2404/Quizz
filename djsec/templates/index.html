@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu1.css' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Menu</title>
+    <style>
+      .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quiz Time</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Records</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/aloged/">Faculty Login</a>
+            </li>
+            <!--<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login Section
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">User Login</a>
+                <a class="dropdown-item" href="/aloged/">Admin Login</a>-->
+                <!--<a class="dropdown-item" href="#">Something else here</a>-->
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'image/menu4.jpg' %}" alt="Los Angeles" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'image/menu5.jpg' %}" alt="Chicago" width="1100" height="500">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'image/menu6.jpg' %}" alt="New York" width="1100" height="500">
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      
+
+
+    <div class="jumbotron text-center">
+        <h1>Start Your Quiz</h1>
+        <p>The Perfect Place for your Quiz Exercise</p> 
+      </div>
+    <div class="myd1" style="background-image: url(/static/image/menu1.jpg);" >
+        <h1 style="color: honeydew;">  Computer Science</h1><br><br><br>
+        <a class="l1" href="/uupshow0/Python">Python</a>
+        <a class="l1" href="/uupshow0/C++">C++</a>
+        <a class="l1" href="/uupshow0/C">C</a>
+        <a class="l1" href="/uupshow0/JavaScript">JavaScript</a>
+        <a class="l1" href="/uupshow0/NodeJS">NodeJS</a>
+    </div>
+    <div class="myd2" style="background-image: url(/static/image/d2.jpg);">
+        <h1 style="color: honeydew;">Fun Quiz</h1><br><br><br>
+        <a class="l2" href="/uupshow0/Bike">Bike Quiz</a>
+        <a class="l2" href="/uupshow0/Car">Car Quiz</a>
+        <a class="l2" href="/uupshow0/Meme">Meme Quiz</a>
+        <a class="l2" href="/uupshow0/Movie">Movie Quiz</a>
+        <a class="l2" href="/uupshow0/Song">Song Quiz</a>
+        
+    </div>
+    <div class="myd3">
+        
+    </div>
+</body>
+</html>

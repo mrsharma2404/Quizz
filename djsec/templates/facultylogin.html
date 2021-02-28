@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" >
+</head>
+<body>
+    <form action="/aloged/" method="POST" class="post-form">
+        {% csrf_token %}
+    <div class="d1">
+        <h1 class="h1">Faculty Log in</h1>
+        
+        
+        {{form.user}}
+        
+        {{form.pwd}}
+
+        <button class="b1" type="submit" >login</button>
+    </div>
+</form>
+</body>
+</html>

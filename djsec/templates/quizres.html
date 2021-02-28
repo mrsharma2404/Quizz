@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 5px; 
+        }
+        .d0{
+            width: 15%; background-color: aqua; height: 110px; margin-right: 2%; 
+            padding: 50px;
+        }
+        .d1{
+            padding-left: 50px; width: 97%; 
+        }
+        .d2{
+            width: 400px; padding-left: 20px; float: left; height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/menu1/">Go Back To Menu</a>
+    <div class="d0">
+    hey you get {{cc}} <br> correct answer out of 10<br><br>
+    <h2>{{rem}}</h2>
+    </div>
+
+        {% for t in data %}
+<div class="d1">
+    <div class="d2">
+       <br>
+        Q1:{{t.q1}}<br>
+        a. {{ t.a11 }}<br>
+        b. {{ t.a12 }}<br>
+        c. {{ t.a13 }}<br>
+        d. {{ t.a14 }}<br>
+        your selected answer is : {{o1}}<br>   
+        and the correct answer is : {{a1}}<br><br>  
+    </div>
+    <div class="d2">
+        <br>
+        Q2:{{t.q2}}   <br>
+        a. {{ t.a21 }}<br>
+        b. {{ t.a22 }}<br>
+        c. {{ t.a23 }}<br>
+        d. {{ t.a24 }}<br>
+        your selected answer is : {{o2}}<br>
+        and the correct answer is : {{a2}}<br><br> 
+    </div>
+    <div class="d2">
+       <br>
+        Q3:{{t.q3}}   <br>
+        a. {{ t.a31 }}<br>
+        b. {{ t.a32 }}<br>
+        c. {{ t.a33 }}<br>
+        d. {{ t.a34 }}<br>
+        your selected answer is : {{o3}}<br>
+        and the correct answer is : {{a3}}<br><br> 
+    </div>
+    <div class="d2">
+       <br>
+        Q4:{{t.q4}}   <br>
+        a. {{ t.a41 }}<br>
+        b. {{ t.a42 }}<br>
+        c. {{ t.a43 }}<br>
+        d. {{ t.a44 }}<br>
+        your selected answer is : {{o4}}<br>
+        and the correct answer is : {{a4}}<br><br> 
+    </div>
+    <div class="d2">
+       <br>
+        Q5:{{t.q5}}   <br>
+        a. {{ t.a51 }}<br>
+        b. {{ t.a52 }}<br>
+        c. {{ t.a53 }}<br>
+        d. {{ t.a54 }}<br>
+        your selected answer is : {{o5}}<br>
+        and the correct answer is : {{a5}}<br><br> 
+    </div>
+    <div class="d2">
+       <br>
+        Q6:{{t.q6}}   <br>
+        a. {{ t.a61 }}<br>
+        b. {{ t.a62 }}<br>
+        c. {{ t.a63 }}<br>
+        d. {{ t.a64 }}<br>
+        your selected answer is : {{o6}}<br>
+        and the correct answer is : {{a6}}<br><br> 
+    </div>
+    <div class="d2">
+       <br>
+        Q7:{{t.q7}}   <br>
+        a. {{ t.a71 }}<br>
+        b. {{ t.a72 }}<br>
+        c. {{ t.a73 }}<br>
+        d. {{ t.a74 }}<br>
+        your selected answer is : {{o7}}<br>
+        and the correct answer is : {{a7}}<br><br> 
+    </div>
+    <div class="d2">
+       <br>
+        Q8:{{t.q8}}   <br>
+        a. {{ t.a81 }}<br>
+        b. {{ t.a82 }}<br>
+        c. {{ t.a83 }}<br>
+        d. {{ t.a84 }}<br>
+        your selected answer is : {{o8}}<br>
+        and the correct answer is : {{a8}}<br><br> 
+    </div>
+    <div class="d2">
+        <br>
+        Q9:{{t.q9}}   <br>
+        a. {{ t.a91 }}<br>
+        b. {{ t.a92 }}<br>
+        c. {{ t.a93 }}<br>
+        d. {{ t.a94 }}<br>
+        your selected answer is : {{o9}}<br>
+        and the correct answer is : {{a9}}<br><br> 
+    </div>
+    <div class="d2">
+       <br>
+        Q10:{{t.q2}}   <br>
+        a. {{ t.a101 }}<br>
+        b. {{ t.a102 }}<br>
+        c. {{ t.a103 }}<br>
+        d. {{ t.a104 }}<br>
+        your selected answer is : {{o10}}<br>
+        and the correct answer is : {{a10}} <br><br>
+    </div>
+    
+</div>
+{%endfor%}
+
+
+</body>
+</html>

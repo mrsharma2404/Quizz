@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <title>User Quiz</title>
+    <style>
+      .d1{
+        margin-left: 10%;
+      }
+      /*this will only work in chrome the radio button color*/
+      input[type='radio']:after { width: 15px; height: 15px; border-radius: 15px; top: -2px; left: -1px; color: green;
+        position: relative; background-color: #d1d3d1; content: ''; display: inline-block; visibility: visible; border: 2px solid white;
+      }
+
+      input[type='radio']:checked:after { width: 15px; height: 15px; border-radius: 15px; top: -2px; left: -1px;
+          position: relative; background-color: #ffa500; content: ''; display: inline-block; visibility: visible; border: 2px solid white;
+      }
+    </style>
+</head>
+<body>
+  <form action="/quizcal/" method="POST">
+    <div class="jumbotron text-center" style="height: 150px;">
+        {% csrf_token %}
+        <h1>Hey, User</h1>   
+      </div>
+      <div class="d1">
+        {% for t in data %}
+        
+        Q = {{ t.q1 }}<br><br>
+        <input type = "radio" class="rb" name="ao1" value = "{{t.a11}}" id = "ao1">   a. {{ t.a11 }}<br>
+        <input type = "radio" class="rb" name="ao1" value = "{{t.a12}}" id = "ao1">   b. {{ t.a12 }}<br>
+        <input type = "radio" class="rb" name="ao1" value = "{{t.a13}}" id = "ao1">   c. {{ t.a13 }}<br>
+        <input type = "radio" class="rb" name="ao1" value = "{{t.a14}}" id = "ao1">   d. {{ t.a14 }}<br>{{
+        <input type="hidden" id="a1" name="a1" value="{{t.ans1}}">
+        <br><br><hr><br>
+        Q = {{ t.q2 }}<br><br>
+        <input type = "radio" class="rb" name="ao2" value = "{{t.a21}}" id = "ao2">   a. {{ t.a21 }}<br>
+        <input type = "radio" class="rb" name="ao2" value = "{{t.a22}}" id = "ao2">   b. {{ t.a22 }}<br>
+        <input type = "radio" class="rb" name="ao2" value = "{{t.a23}}" id = "ao2">   c. {{ t.a23 }}<br>
+        <input type = "radio" class="rb" name="ao2" value = "{{t.a24}}" id = "ao2">   d. {{ t.a24 }}<br>{{
+        <input type="hidden" id="a2" name="a2" value="{{t.ans2}}">
+        <br><br><hr><br>
+        Q = {{ t.q3 }}<br><br>
+        <input type = "radio" class="rb" name="ao3" value = "{{t.a31}}" id = "ao3">   a. {{ t.a31 }}<br>
+        <input type = "radio" class="rb" name="ao3" value = "{{t.a32}}" id = "ao3">   b. {{ t.a32 }}<br>
+        <input type = "radio" class="rb" name="ao3" value = "{{t.a33}}" id = "ao3">   c. {{ t.a33 }}<br>
+        <input type = "radio" class="rb" name="ao3" value = "{{t.a34}}" id = "ao3">   d. {{ t.a34 }}<br>{{
+        <br><br><hr><br>
+        <input type="hidden" id="a3" name="a3" value="{{t.ans3}}">
+        Q = {{ t.q4 }}<br><br>
+        <input type = "radio" class="rb" name="ao4" value = "{{t.a41}}" id = "ao4">   a. {{ t.a41 }}<br>
+        <input type = "radio" class="rb" name="ao4" value = "{{t.a42}}" id = "ao4">   b. {{ t.a42 }}<br>
+        <input type = "radio" class="rb" name="ao4" value = "{{t.a43}}" id = "ao4">   c. {{ t.a43 }}<br>
+        <input type = "radio" class="rb" name="ao4" value = "{{t.a44}}" id = "ao4">   d. {{ t.a44 }}<br>
+       <br><br><hr><br>
+       <input type="hidden" id="a4" name="a4" value="{{t.ans4}}">
+        Q = {{ t.q5 }}<br><br>
+        <input type = "radio" class="rb" name="ao5" value = "{{t.a51}}" id = "ao5">   a. {{ t.a51 }}<br>
+        <input type = "radio" class="rb" name="ao5" value = "{{t.a52}}" id = "ao5">   b. {{ t.a52 }}<br>
+        <input type = "radio" class="rb" name="ao5" value = "{{t.a53}}" id = "ao5">   c. {{ t.a53 }}<br>
+        <input type = "radio" class="rb" name="ao5" value = "{{t.a54}}" id = "ao5">   d. {{ t.a54 }}<br>
+       <br><br><hr><br>
+       <input type="hidden" id="a5" name="a5" value="{{t.ans5}}">
+        Q = {{ t.q6 }}<br><br>
+        <input type = "radio" class="rb" name="ao6" value = "{{t.a61}}" id = "ao6">   a. {{ t.a61 }}<br>
+        <input type = "radio" class="rb" name="ao6" value = "{{t.a62}}" id = "ao6">   b. {{ t.a62 }}<br>
+        <input type = "radio" class="rb" name="ao6" value = "{{t.a63}}" id = "ao6">   c. {{ t.a63 }}<br>
+        <input type = "radio" class="rb" name="ao6" value = "{{t.a64}}" id = "ao6">   d. {{ t.a64 }}<br>
+        <br><br><hr><br>
+        <input type="hidden" id="a6" name="a6" value="{{t.ans6}}">
+        Q = {{ t.q7 }}<br><br>
+        <input type = "radio" class="rb" name="ao7" value = "{{t.a71}}" id = "ao7">   a. {{ t.a71 }}<br>
+        <input type = "radio" class="rb" name="ao7" value = "{{t.a72}}" id = "ao7">   b. {{ t.a72 }}<br>
+        <input type = "radio" class="rb" name="ao7" value = "{{t.a73}}" id = "ao7">   c. {{ t.a73 }}<br>
+        <input type = "radio" class="rb" name="ao7" value = "{{t.a74}}" id = "ao7">   d. {{ t.a74 }}<br>
+        <br><br><hr><br>
+        <input type="hidden" id="a7" name="a7" value="{{t.ans7}}">
+        Q = {{ t.q8 }}<br><br>
+        <input type = "radio" class="rb" name="ao8" value = "{{t.a81}}" id = "ao8">   a. {{ t.a81 }}<br>
+        <input type = "radio" class="rb" name="ao8" value = "{{t.a82}}" id = "ao8">   b. {{ t.a82 }}<br>
+        <input type = "radio" class="rb" name="ao8" value = "{{t.a83}}" id = "ao8">   c. {{ t.a83 }}<br>
+        <input type = "radio" class="rb" name="ao8" value = "{{t.a84}}" id = "ao8">   d. {{ t.a84 }}<br>
+        <input type="hidden" id="a8" name="a8" value="{{t.ans8}}">
+        <br><br><hr><br>
+        Q = {{ t.q9 }}<br><br>
+        <input type = "radio" class="rb" name="ao9" value = "{{t.a91}}" id = "ao9">   a. {{ t.a91 }}<br>
+        <input type = "radio" class="rb" name="ao9" value = "{{t.a92}}" id = "ao9">   b. {{ t.a92 }}<br>
+        <input type = "radio" class="rb" name="ao9" value = "{{t.a93}}" id = "ao9">   c. {{ t.a93 }}<br>
+        <input type = "radio" class="rb" name="ao9" value = "{{t.a94}}" id = "ao9">   d. {{ t.a94 }}<br>
+        <input type="hidden" id="a9" name="a9" value="{{t.ans9}}">
+        <br><br><hr><br>
+        Q = {{ t.q10 }}<br><br>
+        <input type = "radio" class="rb" name="ao10" value = "{{t.a101}}" id = "ao10">   a. {{ t.a101 }}<br>
+        <input type = "radio" class="rb" name="ao10" value = "{{t.a102}}" id = "ao10">   b. {{ t.a102 }}<br>
+        <input type = "radio" class="rb" name="ao10" value = "{{t.a103}}" id = "ao10">   c. {{ t.a103 }}<br>
+        <input type = "radio" class="rb" name="ao10" value = "{{t.a104}}" id = "ao10">   d. {{ t.a104 }}<br>
+        <br><br><hr><br>
+        <input type="hidden" id="a10" name="a10" value="{{t.ans10}}">
+        
+        {% endfor %}
+
+        <input type="submit" value="submit">
+      </div>
+    </form>
+</body>
+</html>

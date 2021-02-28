@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        .as{
+            color: black; padding: 5px 20px 5px 10px; font-size: 16px; width: 100px;
+        }
+        .h1{
+            margin-right: 8px; font-size: 16px; font-family: 'Courier New';
+        }
+        .h2{
+            margin-right: 19px; font-size: 16px; font-family: 'Courier New';
+        }
+        .h3{
+            margin-right: 1px; font-size: 16px; font-family: 'Courier New';
+        }
+        .d11{
+            margin: 100px; float: left;
+        }
+        .b1{
+            margin-left: 1px; width: 150px; height: 30px; background-color: #f44336; text-align: center; 
+            font: 16px arial; border: 1px red solid; border-radius: 4px; margin-bottom: 70px; color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="/uupshow1/">
+    {% csrf_token %}
+    <div class="jumbotron text-center">
+        <h1>Hey, Welcome</h1>
+        <p>The Perfect Place for your Quiz Exercise(user section)</p> 
+      </div>
+    <div class="d11">
+        Level 1 <br><br>
+        {% for t in data1 %}
+            <a href="/uupshow1/{{t.quiz_name}}"> {{t.quiz_name}} by {{t.fac_name}} sir </a><br><br>
+        {% endfor %}
+        <br><br><br><br><br>      
+    </div>
+    <div class="d11">
+        Level 2 <br><br>
+        {% for t in data2 %}
+            <a href="/uupshow1/{{t.quiz_name}}"> {{t.quiz_name}} by {{t.fac_name}} sir </a><br><br>
+        {% endfor %}
+        <br><br><br><br><br>      
+    </div>
+    <div class="d11">
+        Level 3 <br><br>
+        {% for t in data3 %}
+            <a href="/uupshow1/{{t.quiz_name}}"> {{t.quiz_name}} by {{t.fac_name}} sir </a><br><br>
+        {% endfor %}
+        <br><br><br><br><br>      
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Choices</title>
+</head>
+<body>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+    <div class="jumbotron text-center">        
+        <h1>Hey, Faculty</h1>
+        <p>Please Select Your Stream, Level and enter your quiz name</p> 
+    </div>
+    <div>
+        <form method="POST" action="/achoice/" >
+        {% csrf_token %}
+    Stream: <select name="s1">
+                {% for t in obj %}
+                <option value="{{t.stream}}">{{t.stream}}</option>
+                {% endfor %}
+            </select><br><br>
+    Level:  <select name="s2">      
+        <option value="1"> 1 </option>
+        <option value="2"> 2 </option>
+        <option value="3"> 3 </option>
+    </select><br><br>
+    Quiz Name : <input type="text" placeholder="quiz_name" name="quiz_name"><br><br>
+    Faculty Name : <input type="text" placeholder="Faculty_name" name="fac_name"><br><br><br><br>
+    
+    
+      <button class="b1" type="submit" >Submit</button>
+    </form>
+    </div>
+</form>
+</body>
+</html>
